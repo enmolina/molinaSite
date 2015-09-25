@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset=utf-8" />
+		<title>Emily's Cootie Catcher</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,200,700,400" rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="shortcut icon" href="images/favicon.png"/>
+	</head>
+
+	<body>
+		<div id="borderWrapper">
+			<div id="wrapper">
+				<header>
+					<p style="font-size:14em; color:#f88379; text-align:center; font-weight:400; text-shadow: -3px 3px 6px #7d7d7d; margin:0em">
+					EMILY<span style="color:#575757">MOLINA</span>
+					</p>
+				</header>
+				
+				<nav>
+				</nav>
+				
+				<main>
+				
+				
+				<h1>Cootie Catcher</h1>
+				
+				
+				<div id="text">
+				<h2>Let's Play! Click below to begin.</h2>
+				<p id="blah"></p>
+				<p id="Letter"></p>
+				<p id="CountUp"></p>
+				<p id="Welcome"></p>
+				<p id="tada"></p>
+				<p id="demo"></p>
+				<p id="date"></p>
+				<!--<script src="js/cootieCatcher.js"></script>-->
+				<center><button id='mylink'>Start Game</button></center>
+				<script type="text/javascript">
+
+					var myLink = document.getElementById('mylink');
+
+					myLink.onclick = function(){
+
+    					var script = document.createElement("script");
+    					script.type = "text/javascript";
+    					script.src = "js/cootieCatcher.js"; 
+    					document.getElementsByTagName("head")[0].appendChild(script);
+    					return false;
+
+					}
+				</script></center>
+				<br>
+				
+				</main>
+				
+				<footer>
+				</footer>
+			</div>
+		</div>
+	</body>
+		
+</html>
