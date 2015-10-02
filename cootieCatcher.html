@@ -5,7 +5,7 @@
 	<head>
 		<meta charset=utf-8" />
 		<title>Emily's Cootie Catcher</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/cootie.css">
 		<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,200,700,400" rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="shortcut icon" href="images/favicon.png"/>
 	</head>
@@ -25,36 +25,43 @@
 				<main>
 				
 				
-				<h1>Cootie Catcher</h1>
+					<h1>Cootie Catcher</h1>
+					<h2>Let's Play! Click a color below to begin.</h2>
 				
-				
-				<div id="text">
-				<h2>Let's Play! Click below to begin.</h2>
-				<p id="blah"></p>
-				<p id="Letter"></p>
-				<p id="CountUp"></p>
-				<p id="Welcome"></p>
-				<p id="tada"></p>
-				<p id="demo"></p>
-				<p id="date"></p>
-				<!--<script src="js/cootieCatcher.js"></script>-->
-				<center><button id='mylink'>Start Game</button></center>
-				<script type="text/javascript">
+					<div id="catcher">
+						<div class="turquoise" ng-show="questionNumber == 0" ng-mouseover="inc(10)"><p>Turquoise</p></div>
+						<div class="fuchsia" ng-click="questionNumber = questionNumber + 1"><p>Fuchsia</p></div>
+						<div class="green" ng-mouseover=""><p>Green</p></div>
+						<div class="yellow" ng-click="questionNumber = questionNumber - 1"><p>Yellow</p></div>
+					</div>
+					<div id="main">
+					
+						<h2 id="quit"></h2>
+						<h2 id="letter"></h2>
+						<h2 id="countUp"></h2>
+						<h2 id="welcome"></h2>
+						<h2 id="final"></h2>
+						<h3 id="end"></h3>
+					
+						<!--<script src="js/cootieCatcher.js"></script>-->
+						<center><button id='startGame'>Start Game</button></center>
+						<script type="text/javascript">
 
-					var myLink = document.getElementById('mylink');
+						var startGame = document.getElementById('startGame');
 
-					myLink.onclick = function(){
+						startGame.onclick = function(){
 
-    					var script = document.createElement("script");
-    					script.type = "text/javascript";
-    					script.src = "js/cootieCatcher.js"; 
-    					document.getElementsByTagName("head")[0].appendChild(script);
-    					return false;
+							var script = document.createElement("script");
+							script.type = "text/javascript";
+							script.src = "js/cootieCatcher.js"; 
+							document.getElementsByTagName("head")[0].appendChild(script);
+							return false;
 
-					}
-				</script></center>
-				<br>
-				
+						}
+						
+						</script>
+						<script type="text/javascript" src="js/lib/angular.min.js"></script>
+					</div><br>
 				</main>
 				
 				<footer>
@@ -62,5 +69,8 @@
 			</div>
 		</div>
 	</body>
+	<footer>
+		<a href="index.html">HOME</a>
+	</footer>
 		
 </html>

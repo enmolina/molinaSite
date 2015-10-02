@@ -1,0 +1,40 @@
+{
+"choices" :
+      [
+        [
+          {"value": "turquoise"},
+          {"value": "fuschia"},
+          {"value": "green"},
+          {"value" : "yellow"}
+
+        ],
+
+        [
+          {"value": "8"},
+          {"value": "6"},
+          {"value": "2"},
+          {"value": "4"}
+        ],
+
+         [
+          {"value": "7"},
+          {"value": "1"},
+          {"value": "9"},
+          {"value": "3"}
+        ]
+      ],
+
+"fortunes" :
+      [
+        "You will find a thing. It may be important.",
+        "Stop eating now. Food poisoning is no fun.",
+        "Sleep with one eye open tonight.",
+        "Your reality check about to bounce.",
+        "The end is near, might as well have dessert.",
+        "Run.",
+        "You will die alone and poorly dressed.",
+        "Tomorrow is Saturday. And Sunday comes afterwards.",
+
+      ]
+
+}
