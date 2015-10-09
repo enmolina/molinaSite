@@ -6,6 +6,7 @@
 		<meta charset=utf-8" />
 		<title>Emily's Cootie Catcher</title>
 		<link rel="stylesheet" type="text/css" href="css/cootie.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,200,700,400" rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="shortcut icon" href="images/favicon.png"/>
 	</head>
@@ -26,13 +27,13 @@
 				
 				
 					<h1>Cootie Catcher</h1>
-					<h2>Let's Play! Click a color below to begin.</h2>
+					<br>
 				
 					<div id="catcher">
-						<div class="turquoise" ng-show="questionNumber == 0" ng-mouseover="inc(10)"><p>Turquoise</p></div>
-						<div class="fuchsia" ng-click="questionNumber = questionNumber + 1"><p>Fuchsia</p></div>
-						<div class="green" ng-mouseover=""><p>Green</p></div>
-						<div class="yellow" ng-click="questionNumber = questionNumber - 1"><p>Yellow</p></div>
+						<div class="turquoise"><p>Turquoise</p></div>
+						<div class="fuchsia"><p>Fuchsia</p></div>
+						<div class="green"><p>Green</p></div>
+						<div class="yellow"><p>Yellow</p></div>
 					</div>
 					<div id="main">
 					
@@ -43,7 +44,7 @@
 						<h2 id="final"></h2>
 						<h3 id="end"></h3>
 					
-						<!--<script src="js/cootieCatcher.js"></script>-->
+						<!--<script src="js/cootieCatcher2.js"></script>-->
 						<center><button id='startGame'>Start Game</button></center>
 						<script type="text/javascript">
 
