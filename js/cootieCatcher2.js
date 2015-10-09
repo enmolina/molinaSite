@@ -1,96 +1,159 @@
-$(document).ready(function(){
-    var results = [
-      "You will find a thing. It may be important.",
-      "Stop eating now. Food poisoning is no fun.",
-      "Sleep with one eye open tonight.",
-      "Your reality check about to bounce.",
-      "The end is near, might as well have dessert.",
-      "Run.",
-      "You will die alone and poorly dressed.",
-      "Tomorrow is Saturday. And Sunday comes afterwards."
-              ];
+$( document ).ready(function() {
 
-    var unknown=["I'm not familiar with that... sorry!"];
-    var clickCount = 0;
+	var name = "";
+	var number = 0;
+	var fortunes = [
 
-    // this is the same as below
-    /*$().click( function() {
-            function() {
-                    clickCount++;
-                    if(clickCount == 0) {
-                    }  else if( clickCount == 1) {
+    "You will find a thing. It may be important.",
+    "Stop eating now. Food poisoning is no fun.",
+    "Sleep with one eye open tonight.",
+    "Your reality check about to bounce.",
+    "The end is near, might as well have dessert.",
+    "Run.",
+    "You will die alone and poorly dressed.",
+    "Tomorrow is Saturday. And Sunday comes afterwards."
 
-                    }
-                    prompt("emily ain't got no cooties");
+                 ];
 
-    } );
-    */
+	$('#turquoise').on('click', function() {
+		name = $('#turquoise').attr('id');
 
-    // $("#MoonQuadrant").on("click", function() {
-    //     clickCount++;
-    //     if(clickCount == 0) {
-    //     }  else if( clickCount == 1) {
+		console.log(name);
+		shuffleCatcher();
 
-    //     }
-    //     prompt("emily ain't got no cooties");
-    // });
+	});
+	$('#yellow').on('click', function() {
+		name = $('#yellow').attr('id');
 
+		console.log(name);
+		shuffleCatcher();
 
-    $(".turquoise").on("click", onClickHandler);
-    $(".fuchsia").on("click", onClickHandler);
-    $(".green").on("click", onClickHandler);
-    $(".yellow").on("click", onClickHandler);
+	});
+	$('#fuchsia').on('click', function() {
+		name = $('#fuchsia').attr('id');
 
+		console.log(name);
+		shuffleCatcher();
 
-    function onClickHandler(event) {
-        $(".fuchsia").text("8");
-        $(".turquoise").text("6");
-        $(".green").text("2");
-        $(".yellow").text("4");
+	});
+	$('#green').on('click', function() {
+		name = $('#green').attr('id');
 
-        //turn off all first click handlers
-        $(".fuchsia").off( "click", onClickHandlerFirstTime);
-        $(".turquoise").off(  "click", onClickHandlerFirstTime);
-        $(".green").off( "click", onClickHandlerFirstTime);
-        $(".yellow").off(  "click", onClickHandlerFirstTime);
+		console.log(name);
+		shuffleCatcher();
 
-        //turn on all second click handlers
-        $(".fuchsia").on( "click", onClickHandlerAgain);
-        $(".turquoise").on( "click", onClickHandlerAgain);
-        $(".green").on( "click", onClickHandlerAgain);
-        $(".yellow").on( "click", onClickHandlerAgain);
-    }
+	});
 
+	var shuffleCatcher = function(){
+		if(name === "turquoise" || name === "green")
+		{
+			console.log("You chose turquoise or green.");
+			$('#turquoise').text('1');
+			$('#fuchsia').text('8');
+			$('#green').text('13');
+			$('#yellow').text('14');
 
-    function onClickHandlerAgain(event) {
+			$('#yellow').off('click');
+			$('#fuchsia').off('click');
+			$('#turquoise').off('click');
+			$('#green').off('click');
+			startClick();
 
-        var id = event.currentTarget.id;
-        console.log(id);
-        if( id == "8") {
-            $("8").text("Fortune 1.");
-        } else if( id == "6") {
-            $(".turquoise").text("Fortune 2.");
-            } else if( id == "2") {
-                $(".green").text("Fortune 3.");
-                } else if( id == "4") {
-                    $(".yellow").text("Fortune 4.");
-                    }
+		} else {
+			console.log("You chose fuchsia or yellow.");
+			$('#turquoise').text('17');
+			$('#fuchsia').text('4');
+			$('#green').text('7');
+			$('#yellow').text('2');
 
-    }
+			$('#yellow').off('click');
+			$('#fuchsia').off('click');
+			$('#turquoise').off('click');
+			$('#green').off('click');
+			startClick();
+		}
+	}
 
+	var startClick = function()
+	{
+		$('#yellow').on('click', function(){
+			number = $('#yellow').text();
+			console.log(number);
+			checkEven();
+		});
+		$('#fuchsia').on('click', function(){
+			number = $('#fuchsia').text();
+			console.log(number);
+			checkEven();
+		});
+		$('#turquoise').on('click', function(){
+			number = $('#turquoise').text();
+			console.log(number);
+			checkEven();
+		});
+		$('#green').on('click', function(){
+			number = $('#green').text();
+			console.log(number);
+			checkEven();
+		});
 
-        $(".turquoise").append("<p> This is going to be a new paragraph with your selection: " + signChoice +" </p>");//.html("<p> This is going to be a new paragraph with your selection: " + signChoice +" </p>"); //.css({background: '#CC0'}); //.text("YOu chose this prompt: " + signChoice);
+	}
 
-        function action1(choice) {
-            //change each div element to have the image or content that you want
-        }
+	var checkEven = function()
+	{
+		if(!(number%2 === 0)){
+			if(name === "turquoise" || name === "green")
+			{
+				$('#turquoise').text('17');
+				$('#fuchsia').text('4');
+				$('#green').text('7');
+				$('#yellow').text('2');
 
+				$('#yellow').off('click');
+				$('#fuchsia').off('click');
+				$('#turquoise').off('click');
+				$('#green').off('click');
+				tellFortune();
 
-        function action2(choice) {
+			} else {
 
-        }
+				$('#turquoise').text('1');
+				$('#fuchsia').text('8');
+				$('#green').text('13');
+				$('#yellow').text('14');
 
-        function action3(choice) {
+				$('#yellow').off('click');
+				$('#fuchsia').off('click');
+				$('#turquoise').off('click');
+				$('#green').off('click');
+				tellFortune();
+		 }
+		} else {
+			tellFortune();
+		}
+	}
 
-        }
+	var tellFortune = function(){
+		var temp = 0;
+		$('#yellow').on('click', function(){
+			temp = $('#yellow').text();
+      //console.log("I am clicked: "+fortunes[temp-1]);
+			alert("Here is your fortune: " + fortunes[temp-1]);
+		});
+		$('#fuchsia').on('click', function(){
+			temp = $('#yellow').text();
+      //console.log("I am clicked: "+fortunes[temp-1]);
+			alert("Here is your fortune: " + fortunes[temp-1]);
+		});
+		$('#turquoise').on('click', function(){
+			temp = $('#yellow').text();
+      //console.log("I am clicked: "+fortunes[temp-1]);
+			alert("Here is your fortune: " + fortunes[temp-1]);
+		});
+		$('#green').on('click', function(){
+			temp = $('#yellow').text();
+      //console.log("I am clicked: "+fortunes[temp-1]);
+			alert("Here is your fortune: " + fortunes[temp-1]);
+		});
+	}
 });

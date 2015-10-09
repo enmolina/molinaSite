@@ -1,0 +1,219 @@
+
+
+/* COLORS */
+/* Turquoise: #4CECF3 */
+/* Fuchsia: #FF0080  */
+/* Green: #adebad */
+/* Yellow: #FFEC8B */
+
+
+
+
+/* reset */
+
+*
+		{
+		margin:0;
+		padding:0;
+		}
+
+/* global */
+
+header nav main article aside footer
+		{
+		display:block;
+		}
+
+body
+		{
+		background-image:url("../images/grayScales.png");
+		background-attachment:fixed;
+		font-family: 'Oswald', sans-serif;
+		font-weight:300;
+		font-family: 'Yanone Kaffeesatz', Avenir, Helvetica, sans-serif;
+		font-size:1em;
+		}
+
+/* text styling */
+
+
+h1
+		{
+		font-size:3em;
+		font-weight:normal;
+		color:#f88379;
+		border-bottom:3px #7d7d7d solid;
+		margin:.25em 0em;
+		text-align:center;
+		}
+
+h2 /* ex: Let's Play! Click... */
+		{
+		font-size:2em;
+		font-weight:300;
+		color:#7d7d7d;
+		margin:.5em 0em;
+		text-align:center;
+		}
+
+h3 /* Fortune */
+		{
+		font-size:3em;
+    font-style:italic;
+		font-weight:300;
+		color:#f88379;
+		margin:.5em 0em;
+		text-align:center;
+		}
+
+h4
+		{
+		font-size:5em;
+		font-weight:normal;
+		color:#7d7d7d;
+		padding-bottom:7px;
+		border-bottom:3px #7d7d7d solid;
+		text-align:center;
+		}
+
+h5 /* ex: like h4 but smaller & without an underline */
+		{
+		font-size:4.5em;
+		font-weight:normal;
+		color:#7d7d7d;
+		margin: 0em;
+		text-align:center;
+		}
+
+h6
+		{
+		font-size:3em;
+		font-weight:300;
+		color:#7d7d7d;
+		text-align:center;
+		padding-bottom:7px;
+		border-bottom:3px #7d7d7d solid;
+		}
+
+p
+		{
+		font-size:24px;
+		font-weight:300;
+		color:#fff;
+		margin: 38px 0px;
+		text-align:center;
+    text-shadow: 1px 1px #696969;
+		}
+
+a:link
+		{
+		text-decoration:none;
+		color:#4b4d4e;
+		}
+
+
+a:visited
+		{
+		color:#4b4d4e;
+		}
+
+a:hover
+		{
+		color:#ed8c84;
+		}
+
+/* containers and positioning */
+
+#turquoise
+  {
+  width:100px;
+  height:100px;
+  background:#4CECF3;
+  float:left;
+  text-align:center;
+  }
+
+
+#fuchsia
+  {
+  width:100px;
+  height:100px;
+  background:#FF0080;
+  float:right;
+  text-align:center;
+  }
+
+#green
+  {
+  width:100px;
+  height:100px;
+  background:#adebad;
+  float:left;
+  text-align:center;
+  }
+
+#yellow
+  {
+  width:100px;
+  height:100px;
+  background:#FFEC8B;
+  float:right;
+  text-align:center;
+  }
+
+
+#borderWrapper
+		{
+		width:1050px;
+		margin: 2em auto;
+		background-color: rgba(255,255,255,0.4);
+		}
+
+#wrapper
+		{
+		width:1000px;
+		margin: 0px auto;
+		}
+
+#bannerImage
+		{
+		position:relative;
+		width:900px;
+		margin: 0px auto;
+		}
+
+header
+		{
+		padding-top:40px;
+		}
+
+ul
+		{
+		list-style-type: circle;
+		margin-left: 10px;
+		padding-left: 10px;
+		}
+
+ol
+		{
+		margin-left: 10px;
+		padding-left: 10px;
+		}
+
+.indent
+		{
+		margin-left: 50px;
+		}
+
+footer
+		{
+		clear:both;
+		border-bottom:2px #cccccc solid;
+		text-align:center;
+		padding:.50em 0em;
+		font-size:3em;
+		font-weight:normal;
+		color:#f88379;
+		}
+
+/* image elements */
