@@ -26,13 +26,13 @@ body
 		{
 		background-image:url("../images/grayScales.png");
 		background-attachment:fixed;
-		font-family: 'Oswald', sans-serif; 
+		font-family: 'Oswald', sans-serif;
 		font-weight:300;
 		font-family: 'Yanone Kaffeesatz', Avenir, Helvetica, sans-serif;
 		font-size:1em;
 		}
-		
-/* text styling */		
+
+/* text styling */
 
 
 h1
@@ -102,7 +102,7 @@ main h6 /* ex: Project II research titles */
 		padding-bottom:7px;
 		border-bottom:none;
 		}
-		
+
 p
 		{
 		font-size:1.5em;
@@ -112,25 +112,26 @@ p
 		text-align:justify;
 		}
 
-a:link	
+
+a:link
 		{
 		text-decoration:none;
 		color:#4b4d4e;
 		}
 
-	
-a:visited	
+
+a:visited
 		{
 		color:#4b4d4e;
 		}
 
-a:hover	
+a:hover
 		{
 		color:#ed8c84;
 		}
 
 /* containers and positioning */
-		
+
 #borderWrapper
 		{
 		width:1050px;
@@ -148,9 +149,30 @@ a:hover
 		{
 		position:relative;
 		width:900px;
-		margin: 0px auto; 
+		margin: 0px auto;
 		}
-		
+
+#section
+		{
+		width:1000px;
+    height:350px;
+		margin: 0px auto;
+		}
+
+#main
+    {
+    width:500px;
+    margin: 0px auto;
+    float:left;
+    }
+
+#sidebar
+    {
+    width:500px;
+    margin: 0px auto;
+    float:right;
+    }
+
 header
 		{
 		padding-top:40px;
@@ -163,16 +185,21 @@ ul
 		padding-left: 10px;
 		}
 
+li
+    {
+    text-align:center;
+    }
+
 ol
 		{
 		margin-left: 10px;
 		padding-left: 10px;
 		}
-   
+
 .indent
 		{
 		margin-left: 50px;
-		}		
+		}
 
 footer
 		{
@@ -185,4 +212,10 @@ footer
 		color:#f88379;
 		}
 
-/* image elements */		
+/* image elements */
+
+img
+    {
+    max-width: 100%;
+    max-height: 100%;
+    }
