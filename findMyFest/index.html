@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Find My Fest</title>
+  	    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="icon" type="image/png" href="images/8thnote.png">
+  		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+		<meta name='description' content='Discover your new favorite music festival with Find My Fest.'>
+    </head>
+    <body>
+    <div id="fb-root"></div>
+	    <header>
+	    	<div id="logo-header">
+                <a href="index.html"><img src="images/8thnote.png" alt="Find My Fest" width="40" height="40" border="0"></a>
+            </div>
+            <div>
+	    		<a href="index.html"><h1>FIND MY FEST</h1></a>
+	    	</div>
+	    </header>
+	   	<section>
+	    <div class="dropdownLink">
+			 <form name="navList" onsubmit="return submitForm();">
+				 <div id="artist">
+					<select name="subMenu">
+						<option value="" disabled selected> &nbsp; &nbsp;Pick an Artist &nbsp;▼</option>
+						<option value="artist=andy grammer">Andy Grammer</option>
+						<option value="artist=calvin harris">Calvin Harris</option>
+						<option value="artist=carl cox">Carl Cox</option>
+						<option value="artist=d'angelo and the vanguard">D'Angelo And The Vanguard</option>
+						<option value="artist=digable planets">Digable Planets</option>
+						<option value="artist=drake">Drake</option>
+						<option value="artist=fiona apple">Fiona Apple</option>
+                    	<option value="artist=florence + the machine">Florence + The Machine</option>
+                    	<option value="artist=flume">Flume</option>
+                    	<option value="artist=fugazi">Fugazi</option>
+                    	<option value="artist=ghostland observatory">Ghostland Observatory</option>
+                    	<option value="artist=iceage">Iceage</option>
+                    	<option value="artist=idina menzel">Idina Menzel</option>
+                    	<option value="artist=john mayer">John Mayer</option>
+                        <option value="artist=kaskade">Kaskade</option>
+						<option value="artist=kendrick lamar">Kendrick Lamar</option>
+						<option value="artist=lana del rey">Lana del Rey</option>
+                    	<option value="artist=mumford & sons">Mumford & Sons</option>
+                    	<option value="artist=one direction">One Direction</option>
+						<option value="artist=porter robinson">Porter Robinson</option>
+						<option value="artist=savages">Savages</option>
+						<option value="artist=shawn mendes">Shawn Mendes</option>
+						<option value="artist=sleater-kinney">Sleater-Kinney</option>
+                        <option value="artist=tame impala">Tame Impala</option>
+                        <option value="artist=taylor swift">Taylor Swift</option>
+                        <option value="artist=the beatles">The Beatles</option>
+                        <option value="artist=tim mcgraw">Tim McGraw</option>
+                        <option value="artist=twin peaks">Twin Peaks</option>
+                        <option value="artist=wavves">Wavves</option>
+
+
+					</select>
+				  </div>
+				<div id="go">
+					<input type="submit" value="Find my Fest!" />
+				</div>
+			</form>
+	    </section>
+		    <script type="text/javascript">
+				function submitForm() {
+					var list = document.navList.subMenu;
+					var page = 'artistQuery.html?' + list.options[ list.selectedIndex ].value;
+					// var page = list.options[ list.selectedIndex ].value;
+					if (page != "home")
+					window.location = page;
+				return false;
+				}
+			</script>
+			<script type="text/javascript" src="js/findMyFest.js"></script>
+    </body>
+</html>
+
+
+
+

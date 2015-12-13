@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+/* COLORS */
+/* Coral: #f88379 */
+/* Darker Coral: #cda8a4 */
+/* Dark Gray: #575757 */
+/* Darkish Gray: #7d7d7d */
+
+
+/* reset */
+
+*
+		{
+		margin:0;
+		padding:0;
+		}
+
+/* global */
+
+header nav main article aside footer
+		{
+		display:block;
+		}
+
+body
+		{
+		background-image:url("../images/grayScales.png");
+		background-attachment:fixed;
+		font-family: 'Oswald', sans-serif;
+		font-weight:300;
+		font-family: 'Yanone Kaffeesatz', Avenir, Helvetica, sans-serif;
+		font-size:1em;
+		}
+
+/* text styling */
+
+
+h1
+		{
+		font-size:3em;
+		font-weight:normal;
+		color:#f88379;
+		border-bottom:3px #7d7d7d solid;
+		margin:.25em 0em;
+		text-align:center;
+		}
+
+h2
+		{
+		font-size:2em;
+		font-weight:300;
+		color:#7d7d7d;
+		margin:.5em 0em;
+		text-align:center;
+		}
+
+h3 /* ex: READING REPONSE */
+		{
+		font-size:8em;
+		font-weight:400;
+		color:#f88379;
+		margin: 0em;
+		text-align:center;
+		text-shadow: -3px 3px 6px #7d7d7d;
+		}
+
+h4 /* ex: As We May Think */
+		{
+		font-size:5em;
+		font-weight:normal;
+		color:#7d7d7d;
+		padding-bottom:7px;
+		border-bottom:3px #7d7d7d solid;
+		text-align:center;
+		}
+
+h5 /* ex: like h4 but smaller & without an underline */
+		{
+		font-size:4.5em;
+		font-weight:normal;
+		color:#7d7d7d;
+		margin: 0em;
+		text-align:center;
+		}
+
+h6 /* ex: Pages 44-90 subsubtitle */
+		{
+		font-size:3em;
+		font-weight:300;
+		color:#7d7d7d;
+		text-align:center;
+		padding-bottom:7px;
+		border-bottom:3px #7d7d7d solid;
+		}
+
+main h6 /* ex: Project II research titles */
+		{
+		font-size:2.5em;
+		font-weight:300;
+		color:#7d7d7d;
+		text-align:left;
+		padding-bottom:7px;
+		border-bottom:none;
+		}
+
+p
+		{
+		font-size:1.5em;
+		font-weight:300;
+		color:#575757;
+		margin:.25em 0em;
+		text-align:justify;
+		}
+
+
+a:link
+		{
+		text-decoration:none;
+		color:#4b4d4e;
+		}
+
+
+a:visited
+		{
+		color:#4b4d4e;
+		}
+
+a:hover
+		{
+		color:#ed8c84;
+		}
+
+/* containers and positioning */
+
+#borderWrapper
+		{
+		width:1050px;
+		margin: 2em auto;
+		background-color: rgba(255,255,255,0.4);
+		}
+
+#wrapper
+		{
+		width:1000px;
+		margin: 0px auto;
+		}
+
+#bannerImage
+		{
+		position:relative;
+		width:900px;
+		margin: 0px auto;
+		}
+
+#section
+		{
+		width:1000px;
+    height:350px;
+		margin: 0px auto;
+		}
+
+#main
+    {
+    width:500px;
+    margin: 0px auto;
+    float:left;
+    }
+
+#sidebar
+    {
+    width:500px;
+    margin: 0px auto;
+    float:right;
+    }
+
+header
+		{
+		padding-top:40px;
+		}
+
+ul
+		{
+		list-style-type: circle;
+		margin-left: 10px;
+		padding-left: 10px;
+		}
+
+li
+    {
+    text-align:center;
+    }
+
+ol
+		{
+		margin-left: 10px;
+		padding-left: 10px;
+		}
+
+.indent
+		{
+		margin-left: 50px;
+		}
+
+footer
+		{
+		clear:both;
+		border-top:2px #cccccc solid;
+		text-align:center;
+		padding:.50em 0em;
+		font-size:3em;
+		font-weight:normal;
+		color:#f88379;
+		}
+
+/* image elements */
+
+img
+    {
+    max-width: 100%;
+    max-height: 100%;
+    }
