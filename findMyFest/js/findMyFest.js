@@ -104,7 +104,7 @@ var florence = {
 	"similarArtists" :[
 					"Kate Nash",
 					"Ellie Goulding",
-					"Marina and the Diamonds",
+					"Marina and The Diamonds",
 					"Lykke Li",
 					"Sia"
 				]
@@ -524,7 +524,7 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 
 	  	"tile" : "",
 
-	  	"url" : "../festivals/acl.html"
+	  	"url" : "festivals/acl.html"
 
 	}
 
@@ -1063,7 +1063,7 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 
 	  	"tile" : "",
 
-	  	"url" : "../festivals/coachella.html"
+	  	"url" : "festivals/coachella.html"
 
 	}
 
@@ -1389,8 +1389,72 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 	  	"location" : "New York, NY",
 
 		"lineup" :[
-						"",
-						""
+						"Drake",
+						"Florence + The Machine",
+						"My Morning Jacket",
+						"Chromeo",
+						"St. Vincent",
+						"The Decemberists",
+						"Ratatat",
+						"Death From Above 1979",
+						"Charli XCX",
+						"ODESZA",
+						"Rudimental",
+						"Future",
+						"Vance Joy",
+						"Mø",
+						"Gorgon City",
+						"Benjamin Booker",
+						"Diiv",
+						"Rae Sremmurd",
+						"People Under the Stars",
+						"Priory",
+						"Black Pistol Fire",
+						"The Districts",
+						"Deadmau5",
+						"Björk",
+						"Ryan Adams",
+						"Flume",
+						"Conor Oberst",
+						"SBTRKT",
+						"Little Dragon",
+						"Future Islands",
+						"Atmosphere",
+						"Sharon van Etten",
+						"Marina and The Diamonds",
+						"Clean Bandit",
+						"Angus & Julia Stone",
+						"Kiesza",
+						"J. Roddy Walson & The Business",
+						"Moon Taxi",
+						"Rustie",
+						"White Lung",
+						"Kate Tempest",
+						"Astr",
+						"Holychild",
+						"Charlotte OC",
+						"The Black Keys",
+						"Lana del Rey",
+						"Noel Gallagher's High Flying Birds",
+						"Tame Impala",
+						"Hot Chip",
+						"The War on Drugs",
+						"Weird Al Yankovic",
+						"Big Gigantic",
+						"Flying Lotus",
+						"A-trak",
+						"Royal Blood",
+						"Logic",
+						"Sturgill Simpson",
+						"Mayer Hawthorne",
+						"Echosmith",
+						"Strand of Oaks",
+						"Chronixx and the Zincfence Redemption",
+						"Bishop Nehru",
+						"Streets of Laredo",
+						"DMA's",
+						"Hermitude",
+						"The Picturebooks"
 					],
 
 	  	"video" : "",
@@ -1401,7 +1465,7 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 
 
 	var lolla = {
-		"festName" : "lollapalooza",
+		"festName" : "Lollapalooza",
 
 	  	"location" : "",
 
@@ -1556,13 +1620,62 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 	}
 
 	var made = {
-		"festName" : "Budweiser Made in America",
+		"festName" : "Made in America",
 
 	 	"location" : "Philadelphia, PA",
 
 		"lineup" :[
-						"",
-						""
+						"Beyoncé",
+						"The Weeknd",
+						"Axwell ^ Ingrosso",
+						"J. Cole",
+						"Bassnectar",
+						"Modest Mouse",
+						"Death Cab for Cutie",
+						"Banks",
+						"Meek Mill",
+						"Big Sean",
+						"Future",
+						"Duke Dumont",
+						"A-trak",
+						"Santigold",
+						"Nick Jonas",
+						"Metric",
+						"De La Soul",
+						"G-Eazy",
+						"Dj Mustard",
+						"GTA",
+						"Cedric Gervais",
+						"Claud vonStroke",
+						"Fabolous",
+						"Halsey",
+						"Action Bronson",
+						"Earl Sweatshirt",
+						"Ryan Hemsworth",
+						"Vic Mensa",
+						"Burns",
+						"Botnek",
+						"Aeroplane",
+						"Jacob Plant",
+						"Saint Motel",
+						"Young Rising Sons",
+						"Grits & Biscuits",
+						"The Struts",
+						"Flatbush Zombies",
+						"Lola Wolf",
+						"Creepoid",
+						"Superheaven",
+						"Hop Along",
+						"Waxahatchee",
+						"Strand of Oaks",
+						"Remy Banks",
+						"Mick Jenkins",
+						"Marian Hill",
+						"Post Malone",
+						"Mayaeni",
+						"Bas",
+						"Cozz",
+						"Omen"
 					],
 
 	  	"video" : "",
@@ -1746,7 +1859,7 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 						"Kendrick Lamar",
 						"Robert Plant",
 						"Modest Mouse",
-						"Lana Del Rey",
+						"Lana del Rey",
 						"Ryan Adams",
 						"Of Monsters and Men",
 						"The Decemberists",
@@ -1866,17 +1979,70 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 	 	"location" : "Indio, CA",
 
 		"lineup" :[
-						"Blake Shelton",
 						"Tim McGraw",
-						"ZZ Top",
-						"Sturgill Simpson",
-						"Steve Earle",
-						"Miranda Lambert",
-						"Merle Haggard",
-						"Kip Moore",
 						"Jake Owen",
+						"Kip Moore",
+						"Merle Haggard",
+						"Kacey Musgraves",
+						"The Devil Makes Three",
+						"Parmalee",
+						"The Time Jumpers",
+						"Vince Gill",
+						"Dawn Sears",
+						"Kenny Sears",
+						"Ranger Doug Green",
+						"Sturgill Simpson",
+						"The Lone Bellow",
+						"Brothers Osborne",
+						"Parker Millsap",
+						"The Handsome Family",
+						"Lydia Loveless",
+						"Pegi Young",
+						"Lindsay Lou & The Flatbellys",
+						"Can Ochs",
+						"Miranda Lambert",
+						"Dierks Bentley",
+						"Justin Moore",
+						"ZZ Top",
+						"Eli Young Band",
 						"Gregg Allman",
-						"Chris Janson"
+						"Cassadee Pope",
+						"Cast of Nashville",
+						"Charles Esten",
+						"Clare Bowen",
+						"Chris Carmac",
+						"Steve Earle",
+						"The Cadillac Three",
+						"Mickey Gilley",
+						"Mac Davis",
+						"Nikki Lane",
+						"John Moreland",
+						"John & Jacob",
+						"The Quere Sisters Band",
+						"Daniel Romano",
+						"Della Mae",
+						"Clare Dunn",
+						"Anais Mitchell",
+						"Old Salt Union",
+						"Blake Shelton",
+						"The Band Perry",
+						"Sara Evans",
+						"George Thorogood and the Destroyers",
+						"Jerrod Neimann",
+						"Frankie Ballard",
+						"The Oak Ridge Boys",
+						"Hot Rize",
+						"Outlaws",
+						"Eric Burdon and the Animals",
+						"The Swon Brothers",
+						"Maddie & Tae",
+						"Chris Janson",
+						"Keith Anderson",
+						"Chatham County Line",
+						"Logan Brill",
+						"Luke Amelang",
+						"Ben Miller Band",
+						"Andrew Combs"
 					],
 
 	  	"video" : "",
@@ -1893,16 +2059,24 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 						"Kenny Chesney",
 						"Zac Brown Band",
 						"Jake Owen",
-						"The Band Perry",
 						"Little Big Town",
 						"Trace Adkins",
-						"Josh Turner",
+						"Sublime with Rome",
+						"David Nail",
 						"The Mavericks",
 						"Colt Ford",
-						"Sam Hunt",
 						"Chase Rice",
+						"Sam Hunt",
 						"Frankie Ballard",
-						"Maddie & Tay",
+						"Chase Bryant",
+						"The Dirty Guv'nahs",
+						"The Cadillac Three",
+						"Old Dominion",
+						"Maddie & Tae",
+						"Nikki Lane",
+						"Brooke Eden",
+						"Drake White and The Big Fire",
+						"Judah & The Lion"
 					],
 
 	  	"video" : "",
@@ -2146,7 +2320,7 @@ var artists = [andy, beatles, calvin, cox, dangelo, digable, drake, fiona, flore
 
 	  	"tile" : "",
 
-	  	"url" : "../festivals/ultra.html"
+	  	"url" : "festivals/ultra.html"
 	}
 
 

@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
         <title>Just for you...</title>
-  	    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <link rel="icon" type="image/png" href="images/8thnote.png">
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/findMyFest.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="icon" type="image/png" href="images/8thnote.png">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 		<meta name='description' content='Discover your new favorite music festival with Find My Fest.'>
@@ -18,30 +18,18 @@
                 <a href="index.html"><img src="images/8thnote.png" alt="Find My Fest" width="40" height="40" border="0"></a>
             </div>
             <h2>Just for you...</h2>
-                <script></script>
-            <h3>based on ...</h3>
+            <h4 id="basedOn" style="text-transform: uppercase"></h4>
+
 	    </div>
         <div id="discovery-tiles">
-            <a href="festivals/coachella.html">
-                <div 
-                    class="tile" style="background-image:url(images/tiles/coachella.png);">
-                </div>
-            </a>
-            <a href="festivals/govBall.html">
-                <div
-                    class="tile" style="background-image:url(images/tiles/govBall.png);">
-                </div>
-            </a>
-            <a href="festivals/madeInAmerica.html">
-                <div
-                    class="tile" style="background-image:url(images/tiles/madeInAmerica.png);">
-                </div>
-            </a>
+
         </div>
         <div>    
             <center><a href="allFests.html" class="myButton">View All Festivals</a></center>
         </div>
+        <script src="js/findMyFest.js"></script>
         <script>
+            
             console.log("this is the query string")
             console.log(window.location.search)
             console.log("You selected artist....  "+getQueryStringValue('artist'))
@@ -51,29 +39,98 @@
             
             //get the artist object
             var artistObj = getArtistObj(selectedArtist)
-
             console.log(artistObj)
 
             //get the similar artists
+            var similarArtists = artistObj.similarArtists
+            console.log(similarArtists)
 
-            //search the festivals for the similar artists and the artist
-            //make an array for the festivals that match...eg.
-            // var matchingFestivals = []
-            // matchingFestivals.push(festivalObj)
+            //array of festival names
+            var festNames = festivals.map(function(a) {return a.festName;});
+            console.log(festNames)
+
+            //array of festival lineups
+            var festLineups = festivals.map(function(a) {return a.lineup;})
+            console.log(festLineups)
+
+            //get the festival object
+            //var festivalObj = 
+            console.log('....loaded...' + festivals.length + '...festivals from database: findMyFest.js')
+
+            //print artist name, index and array for each similar artist
+            artistObj.similarArtists.forEach( function(a, ind,arr) {
+                                        console.log(a, ind, arr);
+                                })
+
+
             
-            //Clear the html ofthe discovery-tiles
-            // $('discovery-tiles').clear()
+            //pass in a list of artists and see what festivals they are in
+            function isAtFestival(artist, festival) {
+                return festLineups.indexOf(artistObj.name) > -1
+            }
+                
+                //search the festivals for the similar artists and the artist
+                function searchFestivals(artistObj, festivalObj) {
+                //make an array for the festivals that match...eg. matchingFestivals = []
+                    var matches = [];
+
+                festivals.forEach( function(currentFest) {
+                            artistObj.similarArtists.forEach( function(currentArtist) {
+                            //this will check each festival lineup against each of the artistObj related artists
+                                if( isAtFestival(currentArtist,currentFest) ) {
+                                    matches.push( {artist: currentArtist, festival: currentFest.name});
+                                }
+                            })
+                            // Now check to see if the artist is also in the festival
+                            if( isAtFestival(artistObj.name, currentFest)) {
+                            matches.push( {artist: artistObj.name, festival: currentFest.name});
+                        }
+
+                    })
+                    
+                    return matches
+                }
+
+                //for a bunch of artists see if they are in the festival lineups
+                var matches = searchFestivals
+                console.log(matches)
+            
+            
+            //Clear the html of the discovery-tiles
+            $('#discovery-tiles').empty();
 
             //for each matching festival call your jquery magic and append to discovery-tiles
             //e.g.
 
+
             var $div = $("<div/>")
             $div.addClass("tile")
+            
             var $a = $("<a/>")
-            $a.attr("href",festivalObj.url)
+            $a.attr("href")// *currentFest.url or ../festivals/currentFest.html
 
             $div.append($a)
+            $div.append(matches) //append EACH object in matches array to a different tile
             $('#discovery-tiles').append($div)
+
+            //OR THIS:
+            //$(document).ready(function () {
+            //var $newdiv;
+            //for (var i = 0; i < 15; i++) {
+            //$newdiv = $('<div class="tile" />').text(i); //how to append matches?
+            //$('#discovery-tiles').append($newdiv);
+
+            //ORRRR THIS:
+            //var elements = $();
+            //for(x = 0; x < 15; x++) {
+            //elements = elements.add('<div>'+x+'</div>');
+            // or 
+            // var element = $('<div>'+x+'</div>');
+            // elements = elements.add(element);
+            //}
+            // $('body').append(elements);
+            //}
+            //});
 
             
 
@@ -84,6 +141,8 @@
             function getQueryStringValue (key) {  
               return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
             }  
+
+
 
             //REMEMBER NAME is the string that you are passing in through the html query parameter
 
@@ -98,8 +157,13 @@
                 }
                 
                 return null
-            }            
+            }    
         </script>
+        
+        <script>
+        document.getElementById("basedOn").innerHTML = "Based on "+ artistObj.name;
+        </script>
+
     </body>
 </html>
 

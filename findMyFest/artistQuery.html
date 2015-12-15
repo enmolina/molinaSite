@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,23 +9,24 @@
         <link rel="icon" type="image/png" href="images/8thnote.png">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-		<meta name='description' content='Discover your new favorite music festival with Find My Fest.'>
+        <meta name='description' content='Discover your new favorite music festival with Find My Fest.'>
     </head>
     <body>
         <div id="artistHeader">
-	        <div id="logo-header">
+            <div id="logo-header">
                 <a href="index.html"><img src="images/8thnote.png" alt="Find My Fest" width="40" height="40" border="0"></a>
             </div>
             <h2>Just for you...</h2>
             <h4 id="basedOn" style="text-transform: uppercase"></h4>
 
-	    </div>
+        </div>
         <div id="discovery-tiles">
 
         </div>
         <div>    
             <center><a href="allFests.html" class="myButton">View All Festivals</a></center>
         </div>
+        <script src="js/findMyFest.js"></script>
         <script>
             
             console.log("this is the query string")
@@ -48,16 +48,17 @@
 
 
             //array of festival names
-            var festNames = festivals.map(function(a) {return a.name;});
+            var festNames = festivals.map(function(a) {return a.festName;});
             console.log(festNames)
 
             //get the festival object
-            var festivalObj = 
-            console.log(festivalObj)
+            // var festivalObj = 
+            console.log('....loaded...' + festivals.length + '...festivals from database: findMyFest.js')
+
+            festivals.forEach(function(f){ console.log(f.festName); }) 
 
             //array of festival lineups
             var festLineups = festivals.map(function(a) {return a.lineup;})
-
             console.log(festLineups)
 
             //print artist name, index and array for each similar artist
@@ -68,56 +69,75 @@
 
             //pass in a list of artists and see what festivals they are in
             function isAtFestival(artist, festival) {
-                return festLineups.indexOf(artistObj.name) > -1
+                return festival.lineup.indexOf(artistObj.name) > -1
             }
                 
-                //search the festivals for the similar artists and the artist
-                function searchFestivals(artistObj, festivalObj) {
-                //make an array for the festivals that match...eg. matchingFestivals = []
-                    var matches = [];
-
-                festLineups.forEach( function(currentFest) {
-                            artistObj.similarArtists.forEach( function(a) {
+            //search the festivals for the similar artists and the artist
+            //function searchFestivals(artistObj, festivalObj) {
+            function searchFestivals() {
+            //make an array for the festivals that match...eg. matchingFestivals = []
+                var matches = [];
+                
+                festivals.forEach( function(currentFest) {
+                    console.log("CURRENT FEST = " + currentFest.festName)
+                            artistObj.similarArtists.forEach( function(currentArtist) {
                             //this will check each festival lineup against each of the artistObj related artists
-                                if( isAtFestival(a,currentFest) ) {
-                                    matches.push( {artist: a, festival: currentFest.name});
+                                if( isAtFestival(currentArtist,currentFest) ) {
+                                    matches.push( {artist: currentArtist, festival: currentFest});
                                 }
                             })
                             // Now check to see if the artist is also in the festival
-                            if( isAtFestival(artistObj.name, festival)) {
-                            matches.push( {artist: artistObj.name, festival: currentFest.name});
-                        }
-
-                    })
+                            if( isAtFestival(artistObj.name, currentFest)) {
+                                matches.push( {artist: artistObj.name, festival: currentFest});
+                            }
+                        })
                     
-                    return matches
-                }
+                return matches
+            }
 
-                //for a bunch of artists see if they are in the festival lineups
-                var matches = artistObj.similarArtists.map( function(a) {
-                                          return isAtFestival(a,festival)
-                                      })
-                console.log(matches)
-            
-            
+            //for a bunch of artists see if they are in the festival lineups
+            var matches = searchFestivals()
+            if(matches.length > 0) {
+                matches.forEach( function (m) {
+                    console.log('artist: ' + m.artist + ' festival-name: ' + m.festival.festName)
+                })
+            }
+            console.log("MATCHES: " + matches)
+
             //Clear the html of the discovery-tiles
-            $('#discovery-tiles').empty();
+             $('#discovery-tiles').empty();
+
+            var alreadySeen = []
+            matches.forEach( function(currentMatch) {
+                                    // if the current Match's festival in the already seen list then we 
+                                    // will skip this code block and look at the next one
+                                 if( alreadySeen.indexOf( currentMatch.festival.festName) < 0 ) {
+                                    //add the current Match's festival to the alreadySeen List
+                                     alreadySeen.push(currentMatch.festival.festName);
+                                     console.log(currentMatch.festival.festName)
+
+                                     // Now draw the tile for this festival
+
+                                    var $div = $("<div/>")
+                                    $div.addClass("tile")
+                                    
+                                    
+                                    var $a = $("<a/>")
+                                    $a.attr("href", currentMatch.festival.url)
+
+                                    $div.prepend('<img src="images/tiles/' + currentMatch.festival.festName + '.png"/>')
+                                    
+                                    $div.append($a)
+                                    $('#discovery-tiles').append($div)
+                             }})
+            
+            
+            
+           
 
             //for each matching festival call your jquery magic and append to discovery-tiles
             //e.g.
 
-
-            var $div = $("<div/>")
-            $div.addClass("tile")
-            
-            var $a = $("<a/>")
-            $a.attr("href",matches)
-
-            $div.append($a)
-            $('#discovery-tiles').append($div)
-
-
-            
 
     /**
         Solution from StackExchange: http://stackoverflow.com/questions/9870512/how-to-obtaining-the-querystring-from-the-current-url-with-javascript
@@ -151,6 +171,9 @@
 
     </body>
 </html>
+
+
+
 
 
 
