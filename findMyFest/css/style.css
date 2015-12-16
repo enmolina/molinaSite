@@ -160,6 +160,7 @@ h4 /* "Based on Drake" */
   float:left;
   height: 350px;
   margin: 20px;
+  display: inline-block;
   }
 
 .tile:hover

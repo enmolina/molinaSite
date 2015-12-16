@@ -105,7 +105,7 @@
             console.log("MATCHES: " + matches)
 
             //Clear the html of the discovery-tiles
-             $('#discovery-tiles').empty();
+            $('#discovery-tiles').empty();
 
             var alreadySeen = []
             matches.forEach( function(currentMatch) {
@@ -122,12 +122,16 @@
                                     $div.addClass("tile")
                                     
                                     
-                                    var $a = $("<a/>")
-                                    $a.attr("href", currentMatch.festival.url)
+                                    /*var $a = $("<a/>")
+                                    $("a").attr("href", currentMatch.festival.url)
+                                    $div.append($a)*/
 
                                     $div.prepend('<img src="images/tiles/' + currentMatch.festival.festName + '.png"/>')
+
+                                    $("div").click(function(){
+                                        window.location = "findMyFest/" + currentMatch.festival.url;
+                                    });
                                     
-                                    $div.append($a)
                                     $('#discovery-tiles').append($div)
                              }})
             
